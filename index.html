@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>GIỚI THIỆU BÌNH ĐỊNH </title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f2f2f2;
+}
+
+header{
+    background:linear-gradient(90deg,#0077ff,#00c6ff);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* MENU */
+nav{
+    background:#333;
+    text-align:center;
+}
+
+nav button{
+    background:none;
+    border:none;
+    color:white;
+    padding:15px 25px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+nav button:hover{
+    background:#0077ff;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    margin:auto;
+}
+
+/* PAGE EFFECT */
+.page{
+    display:none;
+    opacity:0;
+    transform:translateY(20px);
+    transition:all 0.5s ease;
+}
+
+.page.active{
+    display:block;
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* TITLES */
+
+h2{
+    text-align:center;
+    margin-top:40px;
+}
+
+/* MEMBERS */
+
+.members{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.members ul{
+    columns:2;
+    font-size:18px;
+}
+
+/* PLACES */
+
+.place{
+    display:flex;
+    gap:20px;
+    background:white;
+    margin:20px 0;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.place:hover{
+    transform:scale(1.02);
+}
+
+.place img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#333;
+    color:white;
+    margin-top:30px;
+}
+
+</style>
+
+<script>
+
+function showPage(pageId){
+
+    let pages = document.querySelectorAll(".page");
+
+    pages.forEach(page => {
+        page.classList.remove("active");
+    });
+
+    setTimeout(()=>{
+        document.getElementById(pageId).classList.add("active");
+    },100);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>s</h1>
+<p>Khám phá danh lam thắng cảnh Bình Định</p>
+</header>
+
+<nav>
+<button onclick="showPage('home')">Trang chủ</button>
+<button onclick="showPage('about')">Về chúng tôi</button>
+</nav>
+
+<div class="container">
+
+<!-- TRANG CHỦ -->
+
+<div id="home" class="page active">
+
+<h2>Giới thiệu Bình Định</h2>
+
+<p>
+Bình Định là một tỉnh duyên hải thuộc vùng Nam Trung Bộ của Việt Nam, nổi tiếng với cảnh quan thiên nhiên tuyệt đẹp và bề dày lịch sử văn hóa lâu đời. Nơi đây sở hữu nhiều bãi biển trong xanh, cát trắng mịn cùng những ghềnh đá độc đáo tạo nên phong cảnh rất đặc trưng của miền biển miền Trung.
+</p>
+
+<p>
+Thành phố Quy Nhơn – trung tâm của tỉnh Bình Định – là một điểm đến du lịch nổi tiếng thu hút đông đảo du khách trong và ngoài nước. Khi đến Bình Định, du khách có thể khám phá nhiều địa danh nổi tiếng như Kỳ Co với làn nước trong xanh, Eo Gió với những vách đá uốn lượn hùng vĩ, khu du lịch Trung Lương thơ mộng hay quần thể tháp Chăm cổ kính như Tháp Bánh Ít.
+</p>
+
+<p>
+Không chỉ có cảnh đẹp thiên nhiên, Bình Định còn được biết đến là vùng đất võ nổi tiếng của Việt Nam, nơi lưu giữ nhiều giá trị văn hóa truyền thống đặc sắc. Với sự kết hợp giữa thiên nhiên, lịch sử và văn hóa, Bình Định ngày càng trở thành một điểm đến hấp dẫn đối với du khách yêu thích khám phá và trải nghiệm.
+</p>
+
+<h2>Danh Lam Thắng Cảnh Bình Định</h2>
+
+<div class="place">
+<img src="images/kyco.jpg">
+<div>
+<h3>Kỳ Co</h3>
+<p>Kỳ Co là một bãi biển nổi tiếng ở Quy Nhơn với nước biển xanh trong và bãi cát trắng tuyệt đẹp.</p>
+</div>
+</div>
+
+<div class="place">
+<img src="images/eogio.jpg">
+<div>
+<h3>Eo Gió</h3>
+<p>Eo Gió có những vách đá uốn lượn ôm lấy biển và là nơi ngắm hoàng hôn rất đẹp.</p>
+</div>
+</div>
+
+<div class="place">
+<img src="images/trungluong.jpg">
+<div>
+<h3>Khu du lịch Trung Lương</h3>
+<p>Khu du lịch Trung Lương nổi tiếng với phong cảnh thiên nhiên đẹp và khu cắm trại ven biển.</p>
+</div>
+</div>
+
+<div class="place">
+<img src="images/thapbanhit.jpg">
+<div>
+<h3>Tháp Bánh Ít</h3>
+<p>Tháp Bánh Ít là công trình kiến trúc Chăm cổ nổi tiếng có giá trị lịch sử và văn hóa.</p>
+</div>
+</div>
+
+</div>
+
+
+<!-- TRANG VỀ CHÚNG TÔI -->
+
+<div id="about" class="page">
+
+<h2>Thành Viên Nhóm</h2>
+
+<div class="members">
+<ul>
+<li>Nguyễn Thị Thanh Ngân</li>
+<li>Trịnh An Bin</li>
+<li>Trương Kiều Linh</li>
+<li>Nguyễn Xuân Giang</li>
+<li>Cao Hông Nhung</li>
+<li>Hà Thế Danh</li>
+<li>Võ Ngọc Giàu</li>
+<li>Nguyễn Lê Trinh Nữ</li>
+<li>Trần Khang</li>
+<li>Nguyễn Trọng Điểm</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>Website giới thiệu nhóm - HTML CSS</p>
+</footer>
+
+</body>
+</html>
