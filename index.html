@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Du lịch Bình Định</title>
+<link rel="icon" type="image/png" href="images/logo.png">
 
 <style>
 body{
@@ -13,6 +14,7 @@ body{
 
 /* HEADER */
 header{
+    margin-top:50px;
     background:linear-gradient(90deg,#0077ff,#00c6ff);
     color:white;
     text-align:center;
@@ -22,19 +24,37 @@ header{
 /* MENU */
 nav{
     background:#333;
-    text-align:center;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    padding:5px 20px;
 }
+
+/* LOGO */
+.logo{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-right:20px;
+}
+
+/* MENU BUTTON */
 nav button{
     background:none;
     border:none;
     color:white;
-    padding:15px 25px;
+    padding:15px 20px;
     font-size:16px;
     cursor:pointer;
 }
 nav button:hover{
     background:#0077ff;
 }
+
 
 /* BANNER */
 .banner{
@@ -122,24 +142,28 @@ function topFunction(){
 
 <body>
 
+<!-- MENU -->
+<nav>
+    <img src="images/logo.png" class="logo">
+
+    <button onclick="location.href='index.html'">Trang chủ</button>
+    <button onclick="window.open('danhlam.html')">Danh lam</button>
+    <button onclick="window.open('thuvienanh.html')">Thư viện ảnh</button>
+    <button onclick="window.open('thanhvien.html')">Thành viên</button>
+    <button onclick="window.open('lienhe.html')">Liên hệ</button>
+</nav>
+
+<!-- HEADER -->
 <header>
 <h1>Dự án giới thiệu Bình Định</h1>
 <p>Du lịch - Danh lam thắng cảnh</p>
 <p>Tổ 1 lớp 12a6 trường THPT Tây Sơn</p>
 </header>
 
-<nav>
-<button onclick="location.href='index.html'">Trang chủ</button>
-<button onclick="window.open('danhlam.html')">Danh lam</button>
-<button onclick="window.open('thuvienanh.html')">Thư viện ảnh</button>
-<button onclick="window.open('thanhvien.html')">Thành viên</button>
-<button onclick="window.open('lienhe.html')">Liên hệ</button>
-</nav>
-
 <div class="banner">
 Du lịch Bình Định
 </div>
-
+    
 <div class="container">
 
 <div class="box">
